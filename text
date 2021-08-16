@@ -1,0 +1,1 @@
+env, source_storage_group, target_storage_group, snap_name, new_snap_name, port_group, host, nb_host, backup_policy = '','','','','','','','',''
