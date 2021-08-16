@@ -1,5 +1,6 @@
 #This is a guess the number game
 import random
+import os
 
 name = input("Hello! what is you name: ")
 print("Hello " + name + " Can you gues what number i am thinking between 1 to 20: ")
