@@ -1,0 +1,285 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  generateName: csser-ajs3ra8-6b48c974-
+  annotations:
+    CSSERforceredeploy: changethisvaluetoredeploy354
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "",
+          "interface": "eth0",
+          "ips": [
+              "10.96.2.114"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "",
+          "interface": "eth0",
+          "ips": [
+              "10.96.2.114"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted
+  selfLink: /api/v1/namespaces/csser-ajs3ra8/pods/csser-ajs3ra8-6b48c974-8jmfp
+  resourceVersion: '110761249'
+  name: csser-ajs3ra8-6b48c974-8jmfp
+  uid: 4e5eaf7c-3ec5-4b96-a45e-c13472ced7d7
+  creationTimestamp: '2021-08-17T14:39:22Z'
+  managedFields:
+    - manager: kube-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2021-08-17T14:39:22Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:CSSERforceredeploy': {}
+          'f:generateName': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:pod-template-hash': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"cbcbe84b-38b5-4a75-914c-c5717d8cf0af"}':
+              .: {}
+              'f:apiVersion': {}
+              'f:blockOwnerDeletion': {}
+              'f:controller': {}
+              'f:kind': {}
+              'f:name': {}
+              'f:uid': {}
+        'f:spec':
+          'f:topologySpreadConstraints':
+            .: {}
+            'k:{"topologyKey":"cdc","whenUnsatisfiable":"DoNotSchedule"}':
+              .: {}
+              'f:labelSelector': {}
+              'f:maxSkew': {}
+              'f:topologyKey': {}
+              'f:whenUnsatisfiable': {}
+          'f:volumes':
+            .: {}
+            'k:{"name":"thetestsecret"}':
+              .: {}
+              'f:name': {}
+              'f:secret':
+                .: {}
+                'f:defaultMode': {}
+                'f:secretName': {}
+          'f:containers':
+            'k:{"name":"csser-ajs3ra8"}':
+              .: {}
+              'f:image': {}
+              'f:imagePullPolicy': {}
+              'f:name': {}
+              'f:ports':
+                .: {}
+                'k:{"containerPort":8080,"protocol":"TCP"}':
+                  .: {}
+                  'f:containerPort': {}
+                  'f:protocol': {}
+              'f:resources':
+                .: {}
+                'f:limits':
+                  .: {}
+                  'f:cpu': {}
+                  'f:memory': {}
+                'f:requests':
+                  .: {}
+                  'f:cpu': {}
+                  'f:memory': {}
+              'f:terminationMessagePath': {}
+              'f:terminationMessagePolicy': {}
+          'f:dnsPolicy': {}
+          'f:restartPolicy': {}
+          'f:schedulerName': {}
+          'f:terminationGracePeriodSeconds': {}
+          'f:imagePullSecrets':
+            .: {}
+            'k:{"name":"secret-artifactory"}':
+              .: {}
+              'f:name': {}
+          'f:enableServiceLinks': {}
+          'f:securityContext':
+            .: {}
+            'f:fsGroup': {}
+            'f:seLinuxOptions':
+              'f:level': {}
+    - manager: multus
+      operation: Update
+      apiVersion: v1
+      time: '2021-08-17T14:39:23Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:k8s.v1.cni.cncf.io/network-status': {}
+            'f:k8s.v1.cni.cncf.io/networks-status': {}
+    - manager: kubelet
+      operation: Update
+      apiVersion: v1
+      time: '2021-08-17T14:39:46Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:conditions':
+            'k:{"type":"ContainersReady"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Initialized"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+            'k:{"type":"Ready"}':
+              .: {}
+              'f:lastProbeTime': {}
+              'f:lastTransitionTime': {}
+              'f:status': {}
+              'f:type': {}
+          'f:containerStatuses': {}
+          'f:hostIP': {}
+          'f:phase': {}
+          'f:podIP': {}
+          'f:podIPs':
+            .: {}
+            'k:{"ip":"10.96.2.114"}':
+              .: {}
+              'f:ip': {}
+          'f:startTime': {}
+  namespace: csser-ajs3ra8
+  ownerReferences:
+    - apiVersion: apps/v1
+      kind: ReplicaSet
+      name: csser-ajs3ra8-6b48c974
+      uid: cbcbe84b-38b5-4a75-914c-c5717d8cf0af
+      controller: true
+      blockOwnerDeletion: true
+  labels:
+    app: csser-ajs3ra8
+    pod-template-hash: 6b48c974
+spec:
+  restartPolicy: Always
+  serviceAccountName: default
+  imagePullSecrets:
+    - name: secret-artifactory
+  priority: 0
+  schedulerName: default-scheduler
+  enableServiceLinks: true
+  terminationGracePeriodSeconds: 30
+  preemptionPolicy: PreemptLowerPriority
+  nodeName: svaptcos75.colruyt.int
+  securityContext:
+    seLinuxOptions:
+      level: 's0:c25,c20'
+    fsGroup: 1000640000
+  containers:
+    - resources:
+        limits:
+          cpu: 20m
+          memory: 200Mi
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      terminationMessagePath: /dev/termination-log
+      name: csser-ajs3ra8
+      securityContext:
+        capabilities:
+          drop:
+            - KILL
+            - MKNOD
+            - SETGID
+            - SETUID
+        runAsUser: 1000640000
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+      imagePullPolicy: Always
+      volumeMounts:
+        - name: default-token-62x5d
+          readOnly: true
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      terminationMessagePolicy: File
+      image: >-
+        artifactory.colruyt.int/cpuandstorage-docker-local/systinfra_dockerimage_nginx_user:latest
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: cdc
+      whenUnsatisfiable: DoNotSchedule
+      labelSelector:
+        matchLabels:
+          app: csser-ajs3ra8
+  serviceAccount: default
+  volumes:
+    - name: thetestsecret
+      secret:
+        secretName: thetestsecret
+        defaultMode: 256
+    - name: default-token-62x5d
+      secret:
+        secretName: default-token-62x5d
+        defaultMode: 420
+  dnsPolicy: ClusterFirst
+  tolerations:
+    - key: node.kubernetes.io/not-ready
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/unreachable
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      effect: NoSchedule
+status:
+  phase: Running
+  conditions:
+    - type: Initialized
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2021-08-17T14:39:22Z'
+    - type: Ready
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2021-08-17T14:39:46Z'
+    - type: ContainersReady
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2021-08-17T14:39:46Z'
+    - type: PodScheduled
+      status: 'True'
+      lastProbeTime: null
+      lastTransitionTime: '2021-08-17T14:39:22Z'
+  hostIP: 10.107.1.78
+  podIP: 10.96.2.114
+  podIPs:
+    - ip: 10.96.2.114
+  startTime: '2021-08-17T14:39:22Z'
+  containerStatuses:
+    - restartCount: 0
+      started: true
+      ready: true
+      name: csser-ajs3ra8
+      state:
+        running:
+          startedAt: '2021-08-17T14:39:45Z'
+      imageID: >-
+        artifactory.colruyt.int/cpuandstorage-docker-local/systinfra_dockerimage_nginx_user@sha256:b6048c321ba880020228d535322f364b8c3d8d3b161cf755a48ed52d7fed282f
+      image: >-
+        artifactory.colruyt.int/cpuandstorage-docker-local/systinfra_dockerimage_nginx_user:latest
+      lastState: {}
+      containerID: 'cri-o://08a6362f293edee8b937d6d7c6fe0e28760c2fbb24bc3d4e07e36e32ca15c968'
+  qosClass: Burstable
